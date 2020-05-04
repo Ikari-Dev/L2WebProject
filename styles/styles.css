@@ -15,6 +15,10 @@ body, html {
 body:before {
   position: relative;
   content: 'WELCOME...';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 80vh;
   color: white;
   font-size: 3rem;
   text-align: center;
@@ -167,7 +171,7 @@ body:before {
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 600px) {
   .navBar {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
