@@ -9,6 +9,7 @@ body, html {
   height: 100%;
   position: relative;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
 .parallax {
@@ -26,6 +27,11 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.visible {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .navBar {
