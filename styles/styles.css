@@ -12,6 +12,22 @@ body, html {
   overflow: hidden;
 }
 
+body:before {
+  position: relative;
+  content: 'WELCOME...';
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: #212227;
+  z-index: 10;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  -webkit-animation: anim-reveal 4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: anim-reveal 4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
 .parallax {
   position: relative;
   display: -webkit-box;
@@ -35,6 +51,9 @@ body, html {
 }
 
 .navBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,6 +143,28 @@ body, html {
           transform: scale(2);
   -webkit-transition: ease-in .3s;
   transition: ease-in .3s;
+}
+
+@-webkit-keyframes anim-reveal {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+@keyframes anim-reveal {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
 }
 
 @media screen and (max-height: 800px) {

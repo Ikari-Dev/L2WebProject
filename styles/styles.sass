@@ -9,6 +9,19 @@ body,html
     font-family: 'Open Sans', sans-serif
     overflow: hidden
 
+body:before
+    position: relative
+    content: 'WELCOME...'
+    color: white
+    font-size: 3rem
+    text-align: center
+    height: 100%
+    width: 100%
+    background: rgb(33,34,39)
+    z-index: 10
+    transition: .3s ease-in
+    animation: anim-reveal 4s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
 
 .parallax 
     position: relative
@@ -26,7 +39,9 @@ body,html
     transform: translateY(0px)
 
 .navBar
-   
+    position: absolute
+    top: 0
+    width: 100%
     display: flex
     justify-content: space-between
     background: rgb(33,34,39)   
@@ -87,6 +102,13 @@ body,html
 .link a:hover i
     transform: scale(2)
     transition: ease-in .3s
+
+@keyframes anim-reveal 
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-200%)
+    
 
 @media screen and (max-height: 800px)
 
