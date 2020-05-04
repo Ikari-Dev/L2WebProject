@@ -32,12 +32,14 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #212227;
   list-style: none;
   margin: 0;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 .navBar li a {
@@ -48,7 +50,29 @@ body, html {
   display: block;
 }
 
+.navBar .burger {
+  list-style: none;
+}
+
+.navBar .navigationLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .navBar a:hover {
+  background: white;
+  color: #212227;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navBar .active {
   background: white;
   color: #212227;
   -webkit-transition: .3s;
@@ -94,5 +118,12 @@ body, html {
           transform: scale(2);
   -webkit-transition: ease-in .3s;
   transition: ease-in .3s;
+}
+
+@media screen and (max-height: 800px) {
+  .navBar {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
 }
 /*# sourceMappingURL=aboutStyles.css.map */
