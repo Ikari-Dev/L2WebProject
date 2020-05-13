@@ -12,26 +12,6 @@ body, html {
   overflow: hidden;
 }
 
-body:before {
-  position: relative;
-  content: 'WELCOME...';
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  line-height: 80vh;
-  color: white;
-  font-size: 3rem;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  background: #212227;
-  z-index: 10;
-  -webkit-transition: .3s ease-in;
-  transition: .3s ease-in;
-  -webkit-animation: anim-reveal 4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: anim-reveal 4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-
 .parallax {
   position: relative;
   display: -webkit-box;
