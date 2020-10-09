@@ -1,50 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/2ea72b06d5.js" crossorigin="anonymous" async></script><link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <title>Home</title>
-</head>
-<body class="page">
-    <header>
-        <nav class="navBar">
-            <ul class="burger">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/2ea72b06d5.js" crossorigin="anonymous" async></script><link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body class="page">
+        <header>
+            <nav class="navBar">
+                <div class="burger">
+                
+                </div>
+                <ul class="navigationLink">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="page/chat.html">Chat</a></li>
+                    <li><a href="page/account.html">Account</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
             
-            </ul>
-            <ul class="navigationLink">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="page/about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Account</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="content">
-        <div class="cardspannel">
-            <div class="card">
-                some content
+            <section class="section">
+                <article class="article" id="article1">
+                    <header>
+                        <h2>Mon premier article.</h2>
+                    </header>
+                    <div>
+                        <p>
+                            Ceci est un texte random pour remplir le <strong>premier</strong> article.
+                        </p>
+                        <figure>
+                            <img class="illustration" alt="space_trip" src="ressources/art1.jpg"/>
+                            <figcaption>Petite photo de moi en vacances.</figcaption>
+                        </figure>
+                    </div>
+                    <footer>
+                        <time datetime="2019-06-21">2019-06-21</time>
+                    </footer>
+                </article>
+                <article class="article" id="article2">
+                    <header>
+                        <h2>Mon deuxième article.</h2>
+                    </header>
+                    <div>
+                        <p>
+                            <abbr title="Texte random">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit vitae maiores molestiae vero praesentium omnis, libero optio aspernatur blanditiis dolore dicta minima voluptatem numquam nesciunt ipsam dolor necessitatibus eveniet.</abbr>
+                        </p>
+                        <div class="liste">
+                            <header>
+                                <h4>Ingrédients</h4>
+                            </header>
+                            <ol>
+                                <li>4 oeufs</li>
+                                <li>farine <strong>SANS</strong> gluten</li>
+                                <li>càs de lait</li>
+                            </ol>
+                        </div>
+                    </div>
+                </article>
+                <article class="article" id="article3">
+                    <header>
+                        <h2>Mon troisième article.</h2>
+                    </header>
+                    <div class="tableau">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut suscipit praesentium quae, accusamus dolores sunt minima autem doloribus consectetur quam? Distinctio consequatur vitae maiores voluptates temporibus dolore, laudantium voluptas iste.
+                        </p>
+                        <table>
+                            <caption>Tableau d'évolution du poids</caption>
+                            <thead>
+                                <tr><th>2016-2017</th><th>2017-2018</th><th>2018-2019</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th>156 kg</th><th>113 kg</th><th>98 kg</th></tr>
+                                <tr><th>100 %</th><th>-16 %</th><th>-8 %</th></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+                <article>
+                    <header>
+                        <h2>Connexion</h2>
+                    </header>
+                    <div class="login">
+                        <form action="../htbin/login.py" class="formlogin" method="POST">
+                            <div class="formcontent">
+                                <label for="username">Nom Utilisateur</label>
+                                <input type="text" id="username" name="username">
+                            </div>
+                            <div class="formcontent">
+                                <label for="userpwd">Mot de passe</label>
+                                <input type="password" id="userpwd" name="userpwd">
+                            </div>
+                            <div class="formcontent">
+                                <button type="submit">Connexion</button>
+                                <p id="content"></p>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="footerlink">
+            <div class="link">
+                <a class="google" href="http://www.google.com"><i class="fab fa-google"></i></a>
+                
+                <a class="Ancre" href="#"><i class="fas fa-arrow-up"></i></a>
             </div>
-            <div class="card">
-                some content
-            </div>
-            <div class="card">
-                some content
-            </div>
-            <div class="card">
-                some content
-            </div>
-        </div>
-    </div>
-    <footer class="footerlink">
-        <div class="link">
-            <a class="google" href="http://www.google.com"><i class="fab fa-google"></i></a>
-            <a class="NextPage" href="https://github.com/Ikari-Dev/L2WebProject"><i class="fab fa-github-square"></i></a>
-            <a class="Ancre" href="#"><i class="fas fa-arrow-up"></i></a>
-        </div>
-    </footer>
-<script src="../scripts/tools.js"></script>
-</body>
+        </footer>
+    <script src="../scripts/login.js"></script>
+    </body>
+</html>

@@ -1,3 +1,6 @@
+$primary-color: #212227
+$secondary-color: #d5cec8
+
 *  
     box-sizing: border-box
     margin: 0
@@ -7,10 +10,10 @@ body,html
     height: 100%
     position: relative
     font-family: 'Open Sans', sans-serif
-    overflow: hidden
+    
 
 
-.parallax 
+.page 
     position: relative
     display: flex
     flex-direction: column
@@ -83,7 +86,72 @@ body,html
     transform: scale(2)
     transition: ease-in .3s
 
-@media screen and (max-height: 800px)
+.content
+    display: flex
+    height: 80vh
+    width: 80vw
+    align-items: center
+    justify-content: center
+    margin: auto
+    
 
-    .navBar 
-        transform: translateY(-100%)
+    .chatbox
+        display: flex
+        background-color: rgba(33, 34, 39, .7)
+        border: 2px solid $primary-color
+        height: 100%
+        width: 100%
+        border-radius: 10px
+        flex-direction: column
+        margin-bottom: 5vh
+        
+        .chatarea
+            overflow: hidden
+            display: flex
+            flex-direction: column-reverse
+            justify-content: space-arround
+            height: 100%
+            margin: .3em
+
+        .chatarea .message
+            background-color: white
+            min-height: 2rem
+            border-radius: 5px
+            color: $primary-color
+            text-align: left
+            margin: .2em
+
+        .chatform
+            display: flex
+            flex-direction: reverse-row
+
+        .chatform input
+            border-radius: 5px
+            border: none
+            margin-letf: .4em
+            width: 100%
+
+        .chatform button
+            border: none
+            border-radius: 5px
+            padding: .4em
+            margin-right: .1em
+            cursor: pointer
+
+
+@media screen and ( max-width: 340px )
+
+    .navBar .navigationLink
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100%
+
+        li
+            text-align: center
+
+    .tmp 
+        max-width: 0%
+
+    main.main 
+        margin-top: 30vh
